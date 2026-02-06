@@ -1,0 +1,23 @@
+<div>
+    <h1>🎬 Catálogo de Películas</h1>
+
+    <a href="/" class="btn-back">⬅ Volver al Dashboard</a>
+
+    <form method="get" action="/films" class="search-form">
+        <input type="text"
+               name="title"
+               placeholder="🔎 Buscar por título..."
+               th:value="${title}">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div class="cards">
+        <div class="card" th:each="film : ${films}">
+            <h3 th:text="${film.title}">Título</h3>
+            <p>ID: <span th:text="${film.filmId}"></span></p>
+            <p>Rating: <strong th:text="${film.rating}"></strong></p>
+        </div>
+    </div>
+</div>
+
+

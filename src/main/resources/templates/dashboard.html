@@ -1,0 +1,47 @@
+<div>
+    <h1>📊 Dashboard</h1>
+
+    <div class="cards">
+        <div class="card stat-card">
+            <h3>👤 Clientes</h3>
+            <p th:text="${totalCustomers}">0</p>
+            <span>Total registrados</span>
+        </div>
+
+        <div class="card stat-card">
+            <h3>📦 Alquileres</h3>
+            <p th:text="${totalRentals}">0</p>
+            <span>Histórico total</span>
+        </div>
+
+        <div class="card stat-card">
+            <h3>💳 Pagos</h3>
+            <p th:text="${totalPayments}">0</p>
+            <span>Transacciones</span>
+        </div>
+    </div>
+
+    <h2>📂 Módulos</h2>
+
+    <div class="cards">
+        <a href="/films" class="card link-card">
+            <h3>🎬 Películas</h3>
+            <p>Ver catálogo</p>
+        </a>
+
+        <a href="/customers" class="card link-card">
+            <h3>👥 Clientes</h3>
+            <p>Listado y detalle</p>
+        </a>
+
+        <a href="/rentals" class="card link-card">
+            <h3>📦 Alquileres</h3>
+            <p>Por fecha y tienda</p>
+        </a>
+
+        <a href="/reports" class="card link-card">
+            <h3>📊 Reportes</h3>
+            <p>Ingresos y estadísticas</p>
+        </a>
+    </div>
+</div>

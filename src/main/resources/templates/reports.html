@@ -1,0 +1,31 @@
+<div>
+    <h1>📊 Reportes</h1>
+
+    <a href="/" class="btn-back">⬅ Volver al Dashboard</a>
+
+    <h2>Resumen de Ingresos</h2>
+
+    <div class="report-cards">
+        <div class="report-card" th:each="row : ${income}">
+            <h3 th:text="${row[0]}">Mes</h3>
+            <p th:text="${row[1]}">0.00</p>
+        </div>
+    </div>
+
+    <h2>Detalle Mensual</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Mes</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="row : ${income}">
+            <td th:text="${row[0]}"></td>
+            <td th:text="${row[1]}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

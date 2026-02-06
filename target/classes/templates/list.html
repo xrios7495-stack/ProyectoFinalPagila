@@ -1,0 +1,21 @@
+<div>
+    <h1>📦 Historial de Alquileres</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="r : ${rentals}">
+            <td th:text="${r.rentalId}"></td>
+            <td th:text="${r.rentalDate}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/customers">⬅ Volver a clientes</a>
+</div>

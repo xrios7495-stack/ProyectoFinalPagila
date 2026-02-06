@@ -1,0 +1,35 @@
+<div>
+    <h1>📦 Alquileres por Fecha y Tienda</h1>
+
+    <a href="/" class="btn-back">⬅ Volver al Dashboard</a>
+
+    <form class="search-form" method="get" action="/rentals">
+        <input type="datetime-local" name="start" required>
+        <input type="datetime-local" name="end" required>
+
+        <select name="storeId">
+            <option value="1">Tienda 1</option>
+            <option value="2">Tienda 2</option>
+        </select>
+
+        <button type="submit">Buscar</button>
+    </form>
+
+    <table th:if="${rentals}">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Cliente</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="r : ${rentals}">
+            <td th:text="${r.rentalId}"></td>
+            <td th:text="${r.rentalDate}"></td>
+            <td th:text="${r.customerId}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

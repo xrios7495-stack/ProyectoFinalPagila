@@ -1,0 +1,36 @@
+<div th:fragment="content" class="page">
+
+    <div class="page-header">
+        <h1>👤 Clientes</h1>
+        <a href="/" class="btn-back">⬅ Volver al Dashboard</a>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="c : ${customers}">
+                <td th:text="${c.customerId}"></td>
+                <td th:text="${c.firstName + ' ' + c.lastName}"></td>
+                <td th:text="${c.email}"></td>
+                <td>
+                    <a class="link-action"
+                       th:href="@{/customers/{id}(id=${c.customerId})}">
+                        📄 Ver historial
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+

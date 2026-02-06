@@ -1,0 +1,19 @@
+<div>
+    <h1>Catálogo de Películas</h1>
+
+    <form method="get">
+        <input type="text" name="search" placeholder="Buscar película">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Duración</th>
+        </tr>
+        <tr th:each="f : ${films}">
+            <td th:text="${f.title}"></td>
+            <td th:text="${f.length}"></td>
+        </tr>
+    </table>
+</div>
